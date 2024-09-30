@@ -321,7 +321,7 @@ inline void configuration::standard( PartitionConfig & partition_config ) {
         //overall_best_cut
 
 	partition_config.disable_label_propagation = false;
-	partition_config.disable_quotient_refinement = false;
+	partition_config.disable_quotient_refinement = true;
 	partition_config.disable_fm_multitry = false;
 	partition_config.disable_kway_fm = false;
 
@@ -393,7 +393,7 @@ inline void configuration::clustering( PartitionConfig & partition_config ) {
     partition_config.filename_output              = "";
 
     // VCycle Iterations
-    partition_config.global_cycle_iterations      = 1;
+    partition_config.global_cycle_iterations      = 2;
 
     // ----- Coarsening -----
     // Label propagation
