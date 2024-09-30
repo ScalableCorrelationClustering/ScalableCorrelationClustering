@@ -38,8 +38,28 @@ In this case, the binaries, libraries and headers are in the folder ./build
 
 Graph Format
 =====
+We use the METIS file format. The METIS file format is a simple, space-separated text format used for representing graphs. Each line represents either a node or an edge, depending on its position in the file. METIS files are typically used in graph partitioning algorithms.
+
+#### General Structure:
+1. **Header Line**: The first line of the file contains two or three integers:
+   - `n`: The number of nodes in the graph.
+   - `m`: The number of edges in the graph.
+   - `fmt`: Describes additional information like weights. Default here should be 1 since you have to specifiy edge weights (-1, or 1).
+
+2. **Node and Edge Definitions**:
+   - Each subsequent line represents a node, where the first entry is the list of nodes it is connected to.
+   - Since the graph has **edge weights**, additional values will appear.
+   - **Weighted Graph**: Each line lists the adjacent nodes and the corresponding edge weights.
 
 
+#### Example (Graph with Edge Weights -1 and 1):
+```plaintext
+3 4 1
+2 1 3 -1
+1 1 3 -1 
+1 -1 2 -1
+```
+   
 Running Programs
 =====
 
