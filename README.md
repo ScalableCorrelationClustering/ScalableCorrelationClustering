@@ -45,15 +45,14 @@ The program is licenced under MIT licence.
 If you publish results using our algorithms, please acknowledge our work by quoting the following paper:
 
 ```
-@inproceedings{sandersschulz2013,
-             AUTHOR = {Sanders, Peter and Schulz, Christian},
-             TITLE = {{Think Locally, Act Globally: Highly Balanced Graph Partitioning}},
-             BOOKTITLE = {Proceedings of the 12th International Symposium on Experimental Algorithms (SEA'13)},
-             SERIES = {LNCS},
-             PUBLISHER = {Springer},
-             YEAR = {2013},
-             VOLUME = {7933},
-             PAGES = {164--175}
+@misc{hausberger2024scalablemultilevelmemeticsigned,
+      title={Scalable Multilevel and Memetic Signed Graph Clustering}, 
+      author={Felix Hausberger and Marcelo Fonseca Faraj and Christian Schulz},
+      year={2024},
+      eprint={2208.13618},
+      archivePrefix={arXiv},
+      primaryClass={cs.DS},
+      url={https://arxiv.org/abs/2208.13618}, 
 }
 ```
 
