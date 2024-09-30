@@ -38,27 +38,18 @@ In this case, the binaries, libraries and headers are in the folder ./build
 
 Graph Format
 =====
-We use the METIS file format. The METIS file format is a simple, space-separated text format used for representing graphs. Each line represents either a node or an edge, depending on its position in the file. METIS files are typically used in graph partitioning algorithms.
+The graph format used by our programs is the same as used by Metis, Chaco, and the graph format that has been used during the 10th DIMACS Implementation Challenge on Graph Clustering and Partitioning. The input graph has to be undirected, without self-loops and without parallel edges.
 
-#### General Structure:
-1. **Header Line**: The first line of the file contains two or three integers:
-   - `n`: The number of nodes in the graph.
-   - `m`: The number of edges in the graph.
-   - `fmt`: Describes additional information like weights. Default here should be 1 since you have to specifiy edge weights (-1, or 1).
+To give a description of the graph format, we follow the description of the Metis 4.0 user guide very closely. A graph $G=(V,E)$ with $n$ vertices and $m$ edges is stored in a plain text file that contains $n+1$ lines (excluding comment lines). The first line contains information about the size and the type of the graph, while the remaining $n$ lines contain information for each vertex of $G$. Any line that starts with `%` is a comment line and is skipped.
 
-2. **Node and Edge Definitions**:
-   - Each subsequent line represents a node, where the first entry is the list of nodes it is connected to.
-   - Since the graph has **edge weights**, additional values will appear.
-   - **Weighted Graph**: Each line lists the adjacent nodes and the corresponding edge weights.
+The first line in the file contains either two integers, `n` `m`, or (in our case) three integers, `n` `m` `f`. The first two integers are the number of vertices `n` and the number of undirected edges of the graph, respectively. Note that in determining the number of edges `m`, an edge between any pair of vertices `v` and `u` is counted *only once* and not twice, i.e., we do not count the edge `(v,u)` from `(u,v)` separately. The third integer `f` is used to specify whether or not the graph has weights associated with its vertices, its edges, or both. In our case, this should be set to 1 since we use edge weights. 
 
+The remaining `n` lines of the file store information about the actual structure of the graph. In particular, the `i`th line (again excluding comment lines) contains information about the `i`th vertex. Depending on the value of `f`, the information stored in each line is somewhat different. In the most general form (when `f=11`, i.e., we have node and edge weights), each line has the following structure:
 
-#### Example (Graph with Edge Weights -1 and 1):
-```plaintext
-3 4 1
-2 1 3 -1
-1 1 3 -1 
-1 -1 2 -1
-```
+`c v_1 w_1 v_2 w_2 ... v_k w_k`
+
+where `c` is the vertex weight associated with this vertex, `v_1, ..., v_k` are the vertices adjacent to this vertex, and `w_1, ..., w_k` are the weights of the edges. Note that the vertices are numbered starting from 1 (not from 0). Furthermore, the vertex-weights must be integers greater or equal to 0. However, they will be ignored by our programs.
+
    
 Running Programs
 =====
