@@ -53,6 +53,18 @@ where `c` is the vertex weight associated with this vertex, `v_1, ..., v_k` are 
    
 Running Programs
 =====
+Running the multilevel algorithm is done using
+
+```console
+./deploy/signed_graph_clustering examples/soc-sign-epinions.graph --seed=0
+```
+
+Running the distributed memetic algortihm using 4 cores for 120 seconds is done using
+
+```console
+mpirun -n 4 ./deploy/signed_graph_clustering examples/soc-sign-epinions.graph --seed=0 --time_limit=120
+```
+
 
 Licence
 =====
