@@ -2,8 +2,7 @@
 
 The scalable corrleation clustering (SCC v1.0) framework.
 
-The graph partitioning problem asks for a division of a graph's node set into k equally sized blocks such that the number of edges that run between the blocks is minimized. KaHIP is a family of graph partitioning programs. It includes KaFFPa (Karlsruhe Fast Flow Partitioner), which is a multilevel graph partitioning algorithm, in its variants Strong, Eco and Fast, KaFFPaE (KaFFPaEvolutionary), which is a parallel evolutionary algorithm that uses KaFFPa to provide combine and mutation operations, as well as KaBaPE which extends the evolutionary algorithm. Moreover, specialized techniques are included to partition road networks (Buffoon), to output a vertex separator from a given partition as well as techniques geared towards the efficient partitioning of social networks. Here is an overview of our framework:
-
+We address the issue of graph clustering in signed graphs, which are characterized by positive and negative weighted edges representing attraction and repulsion among nodes, respectively. The primary objective is to efficiently partition the graph into clusters, ensuring that nodes within a cluster are closely linked by positive edges while minimizing negative edge connections between them. To tackle this challenge, we give a scalable multilevel algorithm based on label propagation and local search. Moreover, we give  a memetic algorithm that incorporates a multilevel strategy. This approach meticulously combines elements of evolutionary algorithms with local refinement techniques, aiming to explore the search space more effectively than repeated executions. 
 
 Installation Notes
 =====
