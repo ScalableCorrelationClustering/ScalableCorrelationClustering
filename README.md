@@ -1,4 +1,4 @@
-# SCC v1.0 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/9d0d08ba6b2d42699ab74fe5f9697bb9)](https://www.codacy.com/gh/KaHIP/KaHIP/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=KaHIP/KaHIP&amp;utm_campaign=Badge_Grade) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+# SCC v1.0 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/5a998310685742f588cca5b9002720b1)](https://app.codacy.com?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 The scalable corrleation clustering (SCC v1.0) framework.
 
@@ -35,6 +35,10 @@ make
 cd ..
 ```
 In this case, the binaries, libraries and headers are in the folder ./build
+
+Graph Format
+=====
+
 
 Running Programs
 =====
