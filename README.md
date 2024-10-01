@@ -7,7 +7,7 @@ We address the issue of graph clustering in signed graphs, which are characteriz
 Installation Notes
 =====
 ## Downloading: 
-You can download the proejct with the following command line:
+You can download the project with the following command line:
 
 ```console
 git clone https://github.com/ScalableCorrelationClustering/ScalableCorrelationClustering

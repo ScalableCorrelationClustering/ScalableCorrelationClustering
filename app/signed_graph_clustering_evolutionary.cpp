@@ -165,10 +165,10 @@ int main(int argn, char **argv) {
 		quality_metrics qm;
 		EdgeWeight cut =  qm.edge_cut(G);
 		std::cout << "cut \t\t"         << cut                            << std::endl;
-		std::cout << "z_value\t\t"      << qm.z_value(G)		  << std::endl;
-		std::cout << "error_rate \t"    << qm.error_rate(G)               << std::endl;
-		std::cout << "cluster_count \t" << G.get_partition_count()        << std::endl;
-		std::cout << "finalobjective  " << cut                            << std::endl;
+		//std::cout << "z_value\t\t"      << qm.z_value(G)		  << std::endl;
+		//std::cout << "error_rate \t"    << qm.error_rate(G)               << std::endl;
+		//std::cout << "cluster_count \t" << G.get_partition_count()        << std::endl;
+		//std::cout << "finalobjective  " << cut                            << std::endl;
 		//std::cout << "bnd \t\t"         << qm.boundary_nodes(G)           << std::endl;
 		//std::cout << "modularity  \t"   << tools::calculate_modularity(G) << std::endl;
 		//std::cout << "balance \t"       << qm.balance(G)                  << std::endl;
